@@ -12,7 +12,6 @@ public class RegexTest {
         System.out.println(Pattern.matches(patternStr,"aaaa"));
         System.out.println(0b101101000);
         regex();
-
     }
     public static void  regex(){
         String regex = "[+\\-*/]";

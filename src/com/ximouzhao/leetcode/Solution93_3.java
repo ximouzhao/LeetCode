@@ -25,8 +25,9 @@ public class Solution93_3 {
     only if the segment is equal to '0'
     */
         int m = segment.length();
-        if (m > 3)
+        if (m > 3) {
             return false;
+        }
         return (segment.charAt(0) != '0') ? (Integer.valueOf(segment) <= 255) : (m == 1);
     }
 
@@ -58,9 +59,11 @@ public class Solution93_3 {
             if (valid(segment)) {
                 segments.add(segment);  // place dot
                 if (dots - 1 == 0)      // if all 3 dots are placed
+                {
                     update_output(curr_pos);  // add the solution to output
-                else
+                } else {
                     backtrack(curr_pos, dots - 1);  // continue to place dots
+                }
                 segments.removeLast();  // remove the last placed dot
             }
         }
